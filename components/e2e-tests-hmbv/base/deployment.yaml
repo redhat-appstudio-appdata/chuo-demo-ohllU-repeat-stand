@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: e2e-tests-hmbv
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:qe-chuo-tenant-e2e-tests-hmbv
+      - image: quay.io/redhat-appstudio/user-workload@sha256:163cb48d8623ff8621a6c1d4591ad44a4b80b92c666897b1fb0eb1e0e8bd0b56
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
