@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: e2e-tests-hmbv
+  namespace: qe-chuo-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:163cb48d8623ff8621a6c1d4591ad44a4b80b92c666897b1fb0eb1e0e8bd0b56
+        name: container-image
+        resources: {}
+status: {}
