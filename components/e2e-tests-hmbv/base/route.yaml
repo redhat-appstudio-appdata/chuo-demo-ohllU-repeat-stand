@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: e2e-tests-hmbv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: e2e-tests-hmbv
+    app.kubernetes.io/part-of: chuo-demo
+  name: e2e-tests-hmbv
+  namespace: qe-chuo-tenant
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: e2e-tests-hmbv
+    weight: 100
+status: {}
